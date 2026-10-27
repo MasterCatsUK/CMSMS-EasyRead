@@ -1,4 +1,4 @@
-# EasyRead 0.1.24 — Design Manager templates
+# CMSMS EasyRead Module 0.1.24 — Design Manager templates
 
 ![Easy Read module banner](assets/banner-1544x500.png)
 
