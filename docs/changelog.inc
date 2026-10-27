@@ -1,3 +1,5 @@
+<h3>0.1.24</h3>
+<ul><li>Added the GPL-2.0-or-later licence and PHP licence headers.</li><li>Made the help-page permission check explicit and added dependency metadata and an uninstall warning.</li><li>Documented external image imports, image storage and the admin editor preference cookie.</li></ul>
 <h3>0.1.23</h3>
 <ul><li>General-purpose public distribution with neutral frontend CSS classes and setup examples.</li><li>Existing Design Manager templates remain unchanged during upgrade; copy the new factory markup manually when required.</li></ul>
 <h3>0.1.20</h3><p>Adding another item now opens a WYSIWYG editor, using the same TinyMCE configuration and GPL license key as the editors already on the page.</p>

@@ -73,3 +73,10 @@
 <p>Apply uses CMSMS Content Manager's normal AJAX save and lock handling. Submit uses CMSMS's normal full-page save. Uninstalling Easy Read removes its saved page-block values and the <code>uploads/EasyRead</code> folder.</p>
 
 <h3>Design Manager templates</h3><p>Edit Easy Read Summary under Layout → Design Manager. Render with {EasyRead data=$easyread_data}; choose a named template with template='Easy Read Summary'. The to= parameter continues to return data only.</p>
+
+<h3>External image links and privacy</h3>
+<p>Images are stored under uploads/EasyRead until removed by the site administrator or module uninstall. Remove unnecessary personal information from pictures and image metadata before uploading.</p>
+<p>Use image link sends an HTTP(S) GET request from the hosting server to the public image URL entered by an editor. The chosen host receives the URL, ordinary HTTP request headers and the server IP address. Requests occur only when importing a link; the returned image is stored locally. No fixed external service is used: consult the Terms of Service and Privacy Policy published by the selected image host. Redirects and private network addresses are rejected.</p>
+<p>The admin editor uses an easyreadEditor_PAGEID_BLOCK cookie containing only the shown/hidden editing preference. It is scoped to the CMSMS admin directory, lasts up to one year, uses SameSite=Lax and is Secure on HTTPS. Clear the cookie to reset the preference. No frontend visitor cookie or analytics script is installed by this module.</p>
+<p>Suggested site privacy wording: “Our content editors can upload images or import them from a public image link. Imported images are stored on our hosting; the selected image host receives a normal server request. The editor also uses a cookie to remember whether its editing controls are shown or hidden.”</p>
+<h3>Licence</h3><p>GPL-2.0-or-later; see docs/LICENSE in the module folder.</p>

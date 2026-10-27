@@ -1,4 +1,5 @@
 <?php
+/** SPDX-License-Identifier: GPL-2.0-or-later. See the module docs/LICENSE file. */
 $lang['friendlyname'] = 'Easy Read';
 $lang['moddescription'] = 'Repeatable Easy Read page blocks with a picture, alt description and WYSIWYG content.';
 $lang['postinstall'] = 'Easy Read has been installed.';

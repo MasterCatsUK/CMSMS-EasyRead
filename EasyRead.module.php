@@ -1,4 +1,5 @@
 <?php
+/** SPDX-License-Identifier: GPL-2.0-or-later. See the module docs/LICENSE file. */
 if (!defined('CMS_VERSION')) exit;
 
 /**
@@ -9,7 +10,7 @@ if (!defined('CMS_VERSION')) exit;
  */
 class EasyRead extends CMSModule
 {
-    const VERSION = '0.1.23';
+    const VERSION = '0.1.24';
     const UPLOAD_SUBDIR = 'EasyRead';
     const MAX_UPLOAD_BYTES = 8388608; // 8 MiB
     const VIEW_EXTENSION_PERMISSION = 'View Easy Read in Extensions';
@@ -44,7 +45,17 @@ class EasyRead extends CMSModule
 
     public function GetAuthorEmail()
     {
-        return '';
+        return '2790828+MasterCatsUK@users.noreply.github.com';
+    }
+
+    public function GetDependencies()
+    {
+        return array();
+    }
+
+    public function UninstallPreMessage()
+    {
+        return 'Uninstall removes saved Easy Read page blocks and uploaded pictures. Back up your site and database before continuing.';
     }
 
     public function GetAdminDescription()

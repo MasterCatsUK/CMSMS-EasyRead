@@ -1,7 +1,9 @@
-# EasyRead 0.1.23 — Design Manager templates
+# EasyRead 0.1.24 — Design Manager templates
+
+![Easy Read module banner](assets/banner-1544x500.png)
 
 1. Back up the existing modules/EasyRead folder and CMS database.
-2. Extract EasyRead-0.1.23.zip and replace the site's modules/EasyRead folder with the included EasyRead folder.
+2. Extract EasyRead-0.1.24.zip and replace the site's modules/EasyRead folder with the included EasyRead folder.
 3. In Extensions → Modules, run Upgrade for EasyRead. Do not uninstall first.
 4. Open Layout → Design Manager → Templates. Look for Easy Read Summary (type EasyRead::summary).
 5. Add the generic integration below to your CMSMS page template. Replace any existing Easy Read row loop with `{EasyRead data=$easyread_data}`.
@@ -53,3 +55,42 @@ Easy Read content now renders CMSMS Smarty and module tags automatically. For ex
 
 ## Extensions visibility
 The `View Easy Read in Extensions` permission controls whether a user sees Easy Read in the Extensions menu. Assign it only to users who need the module help page. Removing it hides the Extensions entry, but does not remove Easy Read fields from the page editor or affect published pages.
+
+## Forge preparation (0.1.24)
+
+Added the GPL-2.0-or-later licence, PHP licence headers, an explicit help-page
+permission check, uninstall warning, external-image and editor-cookie disclosures,
+and project artwork.
+
+## External image links and privacy
+
+Uploading an image file stores it in the site's `uploads/EasyRead` directory.
+Image files remain until removed by the site administrator or module uninstall.
+Remove personal information from images and metadata before uploading when
+it is not needed for the published content.
+
+**Use image link** makes an HTTP(S) GET request from the hosting server to the
+public image URL entered by an editor. It sends the URL, ordinary HTTP request
+headers and the server IP address to that image host, then stores the returned
+image locally. The request occurs only when an editor imports a link. There is
+no fixed external provider: consult the Terms of Service and Privacy Policy
+published by the selected image host. Redirects and private network addresses
+are rejected. The module does not load external analytics or tracking scripts.
+
+The admin editor stores an `easyreadEditor_PAGEID_BLOCK` cookie to remember
+whether that saved page's editor is shown or hidden. It contains only the
+display preference, lasts up to one year, and is scoped to the CMSMS admin
+directory with SameSite=Lax (and Secure on HTTPS). Clearing the browser cookie
+resets the preference. It does not store visitor activity or published page
+content. The module sets no frontend visitor cookie; any optional visitor
+toggle is implemented by your site template.
+
+Suggested site privacy wording: “Our content editors can upload images or
+import them from a public image link. Imported images are stored on our hosting;
+the selected image host receives a normal server request. The editor also uses
+a cookie to remember whether its editing controls are shown or hidden.”
+
+## Licence
+
+GPL-2.0-or-later. See [LICENSE](LICENSE). Project support is available through
+[GitHub issues](https://github.com/MasterCatsUK/CMSMS-EasyRead/issues).
