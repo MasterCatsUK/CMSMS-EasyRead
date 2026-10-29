@@ -94,3 +94,7 @@ a cookie to remember whether its editing controls are shown or hidden.”
 
 GPL-2.0-or-later. See [LICENSE](LICENSE). Project support is available through
 [GitHub issues](https://github.com/MasterCatsUK/CMSMS-EasyRead/issues).
+
+## Credits and acknowledgements
+
+See [CREDITS.md](CREDITS.md) for the projects, contributors, services, documentation and artwork that support this module. Existing licence notices are preserved.
